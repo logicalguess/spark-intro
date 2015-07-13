@@ -38,9 +38,9 @@ object TwitterStreaming {
      * Gets the text of a tweet and returns a list of the words
      */
     def clean(tweetText: String): List[String] =
-      tweetText.split(" ").
-        map(_.toLowerCase).
-        filter(_.matches("[a-z]+")).toList
+      tweetText.split(" ")
+        .map(_.toLowerCase)
+        .filter(_.matches("[a-z]+")).toList
 
     /**
      * Rate words.
@@ -65,11 +65,11 @@ object TwitterStreaming {
           score + rate(word)
       }
 
-    twitterStream.
-      map { tweet => (tweet.getId, tweet.getText) }.
-      map { case (id, text) => (id, clean(text)) }.
-      map { case (id,  words) => (id, rateWordList(words)) }.
-      print()
+    twitterStream
+      .map { tweet => (tweet.getId, tweet.getText) }
+      .map { case (id, text) => (id, clean(text)) }
+      .map { case (id,  words) => (id, rateWordList(words)) }
+      .print()
 
     ssc.start()
     ssc.awaitTermination()
