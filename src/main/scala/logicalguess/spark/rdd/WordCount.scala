@@ -36,14 +36,14 @@ object WordCount {
       case (key, value) => value > 20
     }
 
-    filteredWordCount.count()
+    println(filteredWordCount.count())
 
     println(filteredWordCount.collect().toList)
 
     // Make count the key
     StdIn.readLine()
     val reversedCounts = filteredWordCount.map(pair => (pair._2, pair._1))
-                            .sortByKey(false)
+                            .sortByKey(ascending = false)
 
     println(reversedCounts.collect().toList)
 
