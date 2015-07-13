@@ -12,6 +12,8 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.4.0"
 
 libraryDependencies += "org.apache.spark" %% "spark-mllib" % "1.4.0"
 
+libraryDependencies += "org.apache.spark" %% "spark-streaming-twitter" % "1.4.0"
+
 libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.5.2"
 
 libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.5.2" classifier "models"
