@@ -21,3 +21,5 @@ libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.5.2" classif
 libraryDependencies += "edu.stanford.nlp" % "stanford-parser" % "3.5.2"
 
 libraryDependencies += "com.opencsv" % "opencsv" % "3.3"
+
+libraryDependencies += "org.jblas" % "jblas" % "1.2.3"
